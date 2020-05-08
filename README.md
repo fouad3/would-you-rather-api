@@ -61,7 +61,7 @@ Voting options are attached to questions. They include:
     - Get all of the existing users from the database.
 - Request 
     ```
-        GET /api/get-users
+        GET /onRequest/api/get-users
         Authorization: Bearer <token>
     ```
 - Response
@@ -85,7 +85,7 @@ Voting options are attached to questions. They include:
     - Get all of the existing questions from the database.
 - Request 
     ```
-        GET /api/get-questions
+        GET /onRequest/api/get-questions
         Authorization: Bearer <token>
     ```
 - Response
@@ -109,7 +109,7 @@ Voting options are attached to questions. They include:
     - Save the polling question in the database.
 - Request 
     ```
-        POST /api/save-question
+        POST /onRequest/api/save-question
         Authorization: Bearer <token>
     ```
 - Payload
@@ -138,7 +138,7 @@ Voting options are attached to questions. They include:
     - Save the polling question in the database.
 - Request 
     ```
-        POST /api/save-question-answer
+        POST /onRequest/api/save-question-answer
         Authorization: Bearer <token>
     ```
 - Payload
@@ -150,6 +150,21 @@ Voting options are attached to questions. They include:
         }
     ```
 
+### Update User Profile
+- Description
+    - Update user avatar and username in the database.
+- Request 
+    ```
+        POST /onRequest/api/update-user-profile/:user_id
+        Authorization: Bearer <token>
+    ```
+- Payload
+   ```
+        [FormData] {
+            username: [String],
+            avatar: [Obj]
+        }
+    ```
 
 
 ## Setting up the project
